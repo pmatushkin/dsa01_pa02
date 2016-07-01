@@ -6,7 +6,7 @@ public class CoveringSegments {
         int n = segments.length;
 
         // let's find the right boundary of all the segments
-        int maxRight = 0;
+        int maxRight = -1;
         for (int i = 0; i < n; i++) {
             int segmentEnd = segments[i].end;
             if (maxRight < segmentEnd) {
@@ -20,7 +20,7 @@ public class CoveringSegments {
 
         ArrayList<Integer> pointArray = new ArrayList<>();
 
-        int currentPoint = 0;
+        int currentPoint = -1;
         while (true) {
             int currentMinRightPoint = maxRight;
 
